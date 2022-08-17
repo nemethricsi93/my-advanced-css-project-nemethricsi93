@@ -1,0 +1,141 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Font import..........Google font import. 
+ * Variables............Globally-available variables (colors).
+ * Box-sizing...........Better default `box-sizing`.
+ * Base font............Basic font styles.
+ * Headings.............H1-H3 styles.
+ * Links................Hyperlink styles.
+ */
+
+
+/*------------------------------------*\
+  #FONT IMPORT
+\*------------------------------------*/
+
+@import url('');
+
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+:root {
+  --bg-primary: #ffffff;
+  --font-color-primary: ;
+  --font-color-primary-strong: ;
+  --bg-alternate: ;
+  --font-color-alternate: ;
+  --bg-btn: ;
+  --font-color-btn: ;
+}
+
+
+/*------------------------------------*\
+  #BOX-SIZING
+\*------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*------------------------------------*\
+  #BASE FONT
+\*------------------------------------*/
+
+body {
+	background-color: var(--bg-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--font-color-primary);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/*------------------------------------*\
+  #PARAGRAPH
+\*------------------------------------*/
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+/*
+* basic font size: 16px - 1rem
+* basic line-height: 16px*1,5 = 18px
+* font-size: __px / basis font size = ___em
+* line-height: 2*basic line height / font size = 36px / font size
+* margin: basic line-height / font size
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--font-color-primary-strong);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: .45rem 0;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin: .5rem 0;
+}
+
+h3 {
+	font-size: 2rem;
+  line-height: 1.125;
+  margin: .562rem 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: .75rem 0;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin: .9rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 2.25;
+  margin: 1.125rem 0;
+}
+
+
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*------------------------------------*\
+  #LISTS
+\*------------------------------------*/
+
+ul {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: 0;
+}

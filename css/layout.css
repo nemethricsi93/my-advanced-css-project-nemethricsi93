@@ -1,0 +1,61 @@
+/**
+ * CONTENTS
+ *
+ * LAYOUT - GRID SETTINGS
+ * Grid container............Grid container settings.
+ * Content...................Content grid-item settings.
+ * Footer....................Footer grid-item settings.
+ */
+
+
+/*------------------------------------*\
+  #GRID CONTAINER
+\*------------------------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  grid-template-areas: 
+  "navigation"
+  "header"
+  "content"
+  "footer";
+}
+
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+.navigation {
+  grid-area: navigation;
+}
+
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+.header {
+  grid-area: header;
+}
+
+
+/*------------------------------------*\
+  #CONTENT
+\*------------------------------------*/
+
+.content {
+  grid-area: content;
+}
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  grid-area: footer;
+}
