@@ -14,14 +14,14 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr 95% 1fr;
   grid-template-rows: auto;
   grid-gap: 0;
   grid-template-areas: 
-  "navigation"
-  "header"
-  "content"
-  "footer";
+  "navigation navigation navigation"
+  ". header ."
+  ". content ."
+  "footer footer footer";
 }
 
 

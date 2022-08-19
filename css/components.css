@@ -3,12 +3,9 @@
  *
  * COMPONENTS
  * Import............Base.css import for global variables.
- * Base styles.......Setting primary / alternate styles.
- * Cover background..Cover photo background.
- * Logo..............Logo size and paddings.
- * Promo.............Promo text styles.
- * Icons.............Icon colors and sizes.
+ * Navigation........Navigation bar style.
  * Wrapper...........Content wrapper.
+ * Timeline..........Vertical timeline formating.
  * Form..............Login form formating.
  * Buttons...........Button styling.
  * Footer............Background.
@@ -23,177 +20,126 @@
 
 
 /*------------------------------------*\
-  #BASE STYLES
+  #NAVIGATION
 \*------------------------------------*/
 
-.primary {
-    background-color: var(--bg-primary);
-    color: var(--font-color-primary);
+.nav__list {
+    display: flex;
+    flex-flow: column nowrap;
 }
-
-.alternate {
-    background-color: var(--bg-alternate);
-    color: var(--font-color-alternate);
-}
-
-
-/*------------------------------------*\
-  #COVER BACKGROUND
-\*------------------------------------*/
-
-/**
- * Cover photo should be grayscale from css, but I could not get it right.
- *
- * 1. Original code would be like this.
- *
- * But if I comment it out then the whole right side would be greyscaled (buttons also),
- * because of parent-child inheritance.
- * I tried with :before, but could not get it right.
- * I tried with absolute / relative, but it also did not work because of grid.
- *
- */
-
-.content__item--right {
-    background-image: url('../img/bailey-zindel-396398-unsplash.jpg');
-    background-size: cover;
-    /*filter: grayscale(100%);*/ /*[1]*/
-}
-
-
-    @media (max-width: 1024px) {
-        .content__item--right {
-            padding: 2vw;
-        }
+    .toggle {
+        order: 1;
     }
 
+    .item {
+        order: 2;
+        display: none;
 
-/*------------------------------------*\
-  #LOGO
-\*------------------------------------*/
-
-.content__logo {
-    margin: 1.66vh 0 0 1.875vw;
-}
-
-
-/*------------------------------------*\
-  #PROMO
-\*------------------------------------*/
-
-.promo__blurb {
-    display: block;
-    margin-bottom: 6.66vh;
-    min-width: 26vw;
-}
-
-    @media (max-width: 1024px) {
-        .promo__blurb {
-            width:100%;
-            margin-bottom: 4vh;
+    }
+        .active .item {
+            display: block;
         }
 
-        .promo__blurb:first-of-type {
-            margin-top: 4vh;
-        }
+    .nav__link {
+        display: block;
+        text-align: center;
+        padding: .5rem;
+        border-top: 1px solid rgba(255, 255, 255,0.3); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
     }
 
-    .promo__blurb:last-of-type {
-        margin: 0;
-    }
-
-.promo__text {
-    display: inline-block;
-    margin: 0;
-    font-size: 3.333vh;
-}
-
-    @media (max-width: 1024px) {
-        .promo__text {
-            font-size: 3vh;
-        }
-    }
-
-/*------------------------------------*\
-  #ICONS
-\*------------------------------------*/
-
-.icon {
-    display: inline-block;
-    border-radius: 50%;
-    width: 2.5vw;
-    height: 2.5vw;
-    margin-right: 1.25vw;
-    text-align: center;
-}
-
-    @media (max-width: 1024px) {
-        .icon {
-            width: 3.90625vw;
-            height: 3.90625vw;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .icon {
-            width: 8.3333vw;
-            height: 8.3333vw;
-        }
-    }
-
-    .icon--alternate {
-        background-color: var(--bg-btn-alternate);
-        color: var(--font-color-btn-alternate);
-    }
-
-    .icon--social {
-        font-size: 1.25vw;
-        padding-top: .625vw;
-    }
-
-        @media (max-width: 1024px) {
-            .icon--social {
-                font-size: 1.953125vw;
-                padding-top: 0.9765625vw;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .icon--social {
-                font-size: 4.1666vw;
-                padding-top: 2.0833vw;
-            }
-        }
 
 /*------------------------------------*\
   #WRAPPER
 \*------------------------------------*/
 
-.content__wrapper {
-    border-radius: 1rem;
-    padding: 6.6667vh 3.75vw 7.2222vh;
+.content-wrapper {
+    margin-top: 3rem;
 }
 
-    @media (max-width: 1024px) {
-        .content__wrapper {
-            padding: 3vh 3vw;
-        }
+/*------------------------------------*\
+  #TIMELINE
+\*------------------------------------*/
+
+:root {
+    --space: 1rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+    .timeline__item {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+  
+    .timeline__item:before {
+      position:absolute;
+      z-index: -1;
+      content: "";
+      background: #dadee4;
+      height: 100%;
+      left: var(--space);
+      top: calc(2 * var(--space));
+      width: 2px;
     }
 
-    .content__wrapper--33 {
-        width: 33.75vw;
+    .timeline__icon {
+        padding-top: calc(var(--space) + 0.25rem);
     }
 
-        @media (max-width: 1024px) {
-            .content__wrapper--33 {
-                width: 75%;
-            }
+
+        .badge {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: calc(2*var(--space));
+            min-height: calc(2*var(--space));
+            border-radius: 50%;
+            background: blue;
+            color: white;
+            font-size: var(--space);
         }
 
-        @media (max-width: 480px) {
-            .content__wrapper--33 {
-               width: 95%;
-            }
+
+    .timeline__content {
+        margin-left: var(--space);
+        margin-bottom: calc(2*var(--space));
+        background: #fff;
+        color: #666;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+
+    }
+
+        .content__header {
+            border-bottom: 1px solid #e5e5e5;
+            padding: var(--space);
         }
+    
+            .timeline__title {
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: blue;
+            }
+
+            .timeline__badge {
+                padding: calc(0.25*var(--space));
+                border: 2px solid #dadee4;
+                background-color: blue;
+                border-radius: .5em;
+                color: white;
+            }
+    
+        .content__body {
+            padding: var(--space);
+        }
+
 
 /*------------------------------------*\
   #FORM

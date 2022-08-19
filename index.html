@@ -13,25 +13,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://kit.fontawesome.com/4af5542513.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/function.js"></script>
 </head>
 
 <body>
   <div class="grid-container">
 
     <nav class="navigation" id="top-nav">
-      <a class="nav__icon" href="javascript:void(0);" onclick="javascript:openMenu()"><i class="fa-solid fa-bars"></i> Menü</a>
       <ul class="nav__list">
-        <li><a href="#" class="nav__link">Kezdőlap</a></li>
-        <li><a href="#" class="nav__link">Energetikai tanusítás</a></li>
-        <li><a href="#" class="nav__link">Mikor</a></li>
-        <li><a href="#" class="nav__link">Tanusítás menete</a></li>
-        <li><a href="#" class="nav__link">Energetikai osztályok</a></li>
-        <li><a href="#reference" class="nav__link">Referenciák</a></li>
-        <li><a href="#prices" class="nav__link">Árak</a></li>
-        <li><a href="#contact" class="nav__link">Kapcsolat</a></li>
+        <li class="toggle"><a href="#" class="nav__link"><i class="fa-solid fa-bars"></i> Menü</a></li>
+        <li class="item"><a href="#" class="nav__link">Kezdőlap</a></li>
+        <li class="item"><a href="#" class="nav__link">Energetikai tanusítás</a></li>
+        <li class="item"><a href="#" class="nav__link">Mikor</a></li>
+        <li class="item"><a href="#" class="nav__link">Tanusítás menete</a></li>
+        <li class="item"><a href="#" class="nav__link">Energetikai osztályok</a></li>
+        <li class="item"><a href="#reference" class="nav__link">Referenciák</a></li>
+        <li class="item"><a href="#prices" class="nav__link">Árak</a></li>
+        <li class="item"><a href="#contact" class="nav__link">Kapcsolat</a></li>
       </ul>
     </nav>
+
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const menu = document.querySelector(".nav__list");
+      const items = document.querySelectorAll(".item");
+  
+      /* Toggle mobile menu */
+      function toggleMenu() {
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars'></i> Menü";
+      } else {
+        menu.classList.add("active");
+        toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i> Menü";
+        }
+      }
+
+      /* Event Listeners */
+      toggle.addEventListener("click", toggleMenu, false);
+    </script>
+
 
     <header class="header flex-container">
       <img src="img/" alt="logo" class="header__logo">
@@ -75,33 +95,76 @@
       <section class="content-wrapper" id="">
         <h3>Energetikai tanusítás menete</h3>
         <h4>Mit kell tennie, ha szeretne tanusítványt készíttetni?</h4>
+        
+        <div class="timeline">
 
-        <div class="step-wrapper">
-          <h4 class="step__title"><span class="step__no">1./</span> Kapcsolat felvétel</h4>
-          <p class="step__text">
-            Donec auctor consectetur mauris non fringilla. Etiam eu facilisis justo. Duis et massa pulvinar, interdum eros sit amet, vehicula metus. Etiam interdum massa quis consectetur pretium. Vestibulum vel porta turpis. Nullam sagittis interdum ligula sit amet rutrum. Maecenas nisi leo, molestie non ante id, blandit mattis risus. Nulla posuere, risus at tempus sagittis, urna ante suscipit dolor, at fringilla arcu dolor nec nibh.
-          </p>
-        </div>
+          <div class="timeline__item">
+            <div class="timeline__icon">
+              <span class="badge"><i class="fa-solid fa-phone"></i></span>
+            </div>
+            <div class="timeline__content">
+              <div class="content__header">
+                <h3 class="timeline__title">Kapcsolatfelvétel</h3>
+                <span class="timeline__badge">Hívjon most!</span>
+              </div>
+              <div class="content__body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__icon">
+              <span class="badge"><i class="fa-solid fa-ruler-combined"></i></span>
+            </div>
+            <div class="timeline__content">
+              <div class="content__header">
+                <h3 class="timeline__title">Felmérés</h3>
+                <span class="timeline__badge"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;24 óra</span>
+              </div>
+              <div class="content__body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__icon">
+              <span class="badge"><i class="fa-solid fa-file"></i></span>
+            </div>
+            <div class="timeline__content">
+              <div class="content__header">
+                <h3 class="timeline__title">Tanusítvány elkészítése</h3>
+              </div>
+              <div class="content__body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline__item">
+            <div class="timeline__icon">
+              <span class="badge"><i class="fa-solid fa-check"></i></span>
+            </div>
+            <div class="timeline__content">
+              <div class="content__header">
+                <h3 class="timeline__title">Tanusítvány kézhezvétele</h3>
+                <span class="timeline__badge"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;48 óra</span>
+              </div>
+              <div class="content__body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div class="step-wrapper">
-          <h4 class="step__title"><span class="step__no">2./</span> Helyszíni felmérés</h4>
-          <p class="step__text">
-            Donec auctor consectetur mauris non fringilla. Etiam eu facilisis justo. Duis et massa pulvinar, interdum eros sit amet, vehicula metus. Etiam interdum massa quis consectetur pretium. Vestibulum vel porta turpis. Nullam sagittis interdum ligula sit amet rutrum. Maecenas nisi leo, molestie non ante id, blandit mattis risus. Nulla posuere, risus at tempus sagittis, urna ante suscipit dolor, at fringilla arcu dolor nec nibh.
-          </p>
-        </div>
-
-        <div class="step-wrapper">
-          <h4 class="step__title"><span class="step__no">3./</span> Tanusítvány elkészítése</h4>
-          <p class="step__text">
-            Donec auctor consectetur mauris non fringilla. Etiam eu facilisis justo. Duis et massa pulvinar, interdum eros sit amet, vehicula metus. Etiam interdum massa quis consectetur pretium. Vestibulum vel porta turpis. Nullam sagittis interdum ligula sit amet rutrum. Maecenas nisi leo, molestie non ante id, blandit mattis risus. Nulla posuere, risus at tempus sagittis, urna ante suscipit dolor, at fringilla arcu dolor nec nibh.
-          </p>
-        </div>
-
-        <div class="step-wrapper">
-          <h4 class="step__title"><span class="step__no">4./</span> Tanusítvány kézhez vétele</h4>
-          <p class="step__text">
-            Donec auctor consectetur mauris non fringilla. Etiam eu facilisis justo. Duis et massa pulvinar, interdum eros sit amet, vehicula metus. Etiam interdum massa quis consectetur pretium. Vestibulum vel porta turpis. Nullam sagittis interdum ligula sit amet rutrum. Maecenas nisi leo, molestie non ante id, blandit mattis risus. Nulla posuere, risus at tempus sagittis, urna ante suscipit dolor, at fringilla arcu dolor nec nibh.
-          </p>
         </div>
 
       </section>
