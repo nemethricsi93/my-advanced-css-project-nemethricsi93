@@ -1,10 +1,15 @@
 /**
  * CONTENTS
  *
- * LAYOUT - GRID SETTINGS
+ * MAIN LAYOUT - GRID SETTINGS
  * Grid container............Grid container settings.
- * Content...................Content grid-item settings.
- * Footer....................Footer grid-item settings.
+ * Navigation................Navigation grid-item.
+ * Header....................Header grid-item.
+ * Content...................Content grid-item.
+ * Footer....................Footer grid-item.
+ *
+ * SUB-LAYOUT - FLEXBOX SETTINGS
+ * Flex container............Flex container settings.
  */
 
 
@@ -25,37 +30,63 @@
 }
 
 
+  /*------------------------------------*\
+    #NAVIGATION
+  \*------------------------------------*/
+
+  .navigation {
+    grid-area: navigation;
+  }
+
+    .sticky {
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+    }
+
+
+  /*------------------------------------*\
+    #HEADER
+  \*------------------------------------*/
+
+  .header {
+    grid-area: header;
+  }
+
+
+  /*------------------------------------*\
+    #CONTENT
+  \*------------------------------------*/
+
+  .content {
+    grid-area: content;
+  }
+
+
+  /*------------------------------------*\
+    #FOOTER
+  \*------------------------------------*/
+
+  .footer {
+    grid-area: footer;
+  }
+
+
 /*------------------------------------*\
-  #NAVIGATION
+  #FLEX CONTAINER
 \*------------------------------------*/
 
-.navigation {
-  grid-area: navigation;
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+  .flex--center {
+    justify-content: center;
+    align-content: center;
+  }
 
-/*------------------------------------*\
-  #NAVIGATION
-\*------------------------------------*/
-
-.header {
-  grid-area: header;
-}
-
-
-/*------------------------------------*\
-  #CONTENT
-\*------------------------------------*/
-
-.content {
-  grid-area: content;
-}
-
-
-/*------------------------------------*\
-  #FOOTER
-\*------------------------------------*/
-
-.footer {
-  grid-area: footer;
-}
+  .flex--selfcenter { align-self:center;}
