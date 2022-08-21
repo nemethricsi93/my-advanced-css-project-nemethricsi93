@@ -52,6 +52,8 @@
 
   .header {
     grid-area: header;
+    height: calc(100vh - 2.5rem);
+    padding: 1rem 0;
   }
 
 
@@ -80,7 +82,7 @@
 .flex {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 

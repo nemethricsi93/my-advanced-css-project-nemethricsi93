@@ -19,7 +19,7 @@
   <div class="grid-container" id="home">
 
     <nav class="navigation" id="top-nav">
-      <ul class="nav__list flex">
+      <ul class="navigation__list flex">
         <li class="toggle"><a href="#" class="nav__link"><i class="fa-solid fa-bars"></i> Menü</a></li>
         <li class="item"><a href="#home" class="nav__link">Kezdőlap</a></li>
         <li class="item"><a href="#page1" class="nav__link">Energetikai tanusítás</a></li>
@@ -34,7 +34,7 @@
 
     <script>
       const toggle = document.querySelector(".toggle");
-      const menu = document.querySelector(".nav__list");
+      const menu = document.querySelector(".navigation__list");
       const items = document.querySelectorAll(".item");
   
       /* Toggle mobile menu */
@@ -60,10 +60,10 @@
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum mollis erat, eu porta nulla. Praesent ultrices magna fringilla finibus rhoncus. Nulla ullamcorper ipsum erat, eu lacinia mauris lacinia vitae.
+          Ingatlan adás-vétel, pályázat vagy új ingatlan használatbavételi engedélyéhez 24 órán belüli felméréssel, 48 órán belül elkészítjük energetikai tanusítványát Győr-Moson-Sopron megye egész területén, sürgősségi felár és kiszállási költség nélkül.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum mollis erat, eu porta nulla. Praesent ultrices magna fringilla finibus rhoncus. Nulla ullamcorper ipsum erat, eu lacinia mauris lacinia vitae.
+          Keressen bizalommal, akár hétvégén is!
         </p>
       </div>
       <div class="flex--selfcenter">
@@ -76,29 +76,41 @@
 
     <main class="content">
 
-      <section class="content-wrapper --onepager" id="page1">
-        <h3>Energetikai tanusítás</h3>
-        <h4>Mi is az az Energetikai tanusítás és mire jó?</h4>
+      <section class="content-wrapper" id="page1">
+        <h3 class="content__title">Energetikai tanusítvány</h3>
+        <h4>Mi az és mire jó?</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel nunc non nisl lobortis accumsan. Maecenas pulvinar pellentesque est eu auctor. Morbi sed suscipit mi, nec lacinia nulla. Phasellus consectetur nisi in luctus commodo. Vivamus non faucibus erat. Aliquam erat volutpat. Curabitur ligula turpis, sodales nec semper vitae, maximus nec leo. Donec feugiat neque lectus, ac viverra turpis lobortis eget. Nunc vel tortor ut quam commodo scelerisque. Praesent et nunc tellus. Nunc sed libero a magna hendrerit scelerisque vel sed metus. Phasellus vitae auctor ligula, ac consequat ex. Vivamus a molestie neque. Cras dignissim mauris eu ex placerat, non finibus ante faucibus. Nulla quis commodo neque. Aliquam vel eros purus.
+          Az energetikai tanúsítvány egy magánokirat, mely az ingatlan energia fogyasztásáról ad bővebb tájékoztatást. A fogyasztás mértéke fogja meghatározni az ingatlan besorolását, kategóriáját. Továbbá tájékoztatást ad az ingatlan fűtés és meleg víz rendszeréről, az épület rétegrendjeiről, valamint javaslatot tesz az ingatlan energetikai korszerűsítésére is. A manapság fizetendő magas rezsi költségek miatt egyre nagyobb figyelem irányul rá a vásárlók és bérlők körében.
         </p>
         <figure>
-          <img src="img/" alt="" class="content__pic">
+          <img src="img/energetikai-tanusitas.jpg" alt="Energetikai tanusítás" class="content__pic">
           <figcaption>Energetikai tanusítás</figcaption>
         </figure>
-        <a href="#page2" class="btn">Mikor lehet szükségem rá? &nbsp;<i class="fa-solid fa-angles-down"></i></a>
       </section>
 
-      <section class="content-wrapper --onepager" id="page2">
-        <h3>Mikor kell tanusítást készíttetni?</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel nunc non nisl lobortis accumsan. Maecenas pulvinar pellentesque est eu auctor. Morbi sed suscipit mi, nec lacinia nulla. Phasellus consectetur nisi in luctus commodo. Vivamus non faucibus erat. Aliquam erat volutpat. Curabitur ligula turpis, sodales nec semper vitae, maximus nec leo. Donec feugiat neque lectus, ac viverra turpis lobortis eget. Nunc vel tortor ut quam commodo scelerisque. Praesent et nunc tellus. Nunc sed libero a magna hendrerit scelerisque vel sed metus. Phasellus vitae auctor ligula, ac consequat ex. Vivamus a molestie neque. Cras dignissim mauris eu ex placerat, non finibus ante faucibus. Nulla quis commodo neque. Aliquam vel eros purus.
-        </p>
-        <a href="#page3" class="btn">Hogy megy a tanusítás? &nbsp;<i class="fa-solid fa-angles-down"></i></a>
+      <section class="content-wrapper" id="page2">
+        <h3 class="content__title">Mikor kell tanusítást készíttetni?</h3>
+        <h4>Energetikai tanusítványra szüksége lehet:</h4>
+        <ol>
+          <li>Új ingatlanának használatbavételi engedélyéhez,</li>
+          <li>Ingatlan adás / vétel esetén,</li>
+          <li>Ingatlan bérbeadás esetén,</li>
+          <li>Meglévő ingatlanának energetikai pályázatához, amennyiben a pályázat azt előírja,</li>
+          <li>Saját felhasználásra, amennyiben érdekli ingatlanának energetikai korszerűsége.</li>
+        </ol>
+        <h4>Mikor nem szükséges energetikai tanusítvány készíttetni:</h4>
+        <ol>
+          <li>50 m2-nél kisebb hasznos alapterületű, külön álló épületre (családi házra),</li>
+          <li>nyaralóra, hétvégi házra, üdülőre (évente 4 hónapnál rövidebb használatra szánt épületre),</li>
+          <li>legfeljebb 2 évi használatra szánt felvonulási épületre,</li>
+          <li>hitéleti célra szánt épületre,</li>
+          <li>alacsony energiaigényű mezőgazdasági épületre,</li>
+          <li>bizonyos esetekben műhelyre, vagy ipari területen lévő épületre.</li>
+        </ol>
       </section>
       
       <section class="content-wrapper" id="page3">
-        <h3>Energetikai tanusítás menete</h3>
+        <h3 class="content__title">Energetikai tanusítás menete</h3>
         <h4>Mit kell tennie, ha szeretne tanusítványt készíttetni?</h4>
         
         <div class="timeline">
@@ -110,12 +122,16 @@
             <div class="timeline__content">
               <div class="content__header">
                 <h3 class="timeline__title">Kapcsolatfelvétel</h3>
-                <span class="btn btn--primary">Hívjon most!</span>
+                <span class="btn btn--primary"><a href="tel:+36701234567">Hívjon most!</a></span>
               </div>
               <div class="content__body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                  Keressen bizalommal <strong>8:00-tól 20:00-ig (akár hétvégén is)</strong><br>
+                és egyeztessünk időpontot ingatlanának felmérésére.
                 </p>
+                <p>
+                  Az időpont lefoglalásához szükségem lesz az Ön nevére, telefonszámára, az ingatlan címére és pár további információra.
+                </p>          
               </div>
             </div>
           </div>
@@ -131,7 +147,19 @@
               </div>
               <div class="content__body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                  Az egyeztetett időpontban a <strong>hívásától számítva akár 12-24 órán belül</strong> megérkezem a felmérést elvégezni, amely az épület bonyolultságától függően <strong>30-60 percig tart</strong>.
+                </p>
+                <h4>A felmérés során a következő információkat gyűjtöm össze:</h4>
+                <ol>
+                  <li><strong>Ingatlan helyrajzi száma<br>- Fontos ezt Önnek kell megadnia!</strong></li>
+                  <li>Épület külső lehülő felületeinek méretei, fényképek a homlokzatokról,</li>
+                  <li>Épület falazatának, padozatának és födémjének rétegrendjei,</li>
+                  <li>Nyílászárók típusai, méretei és fényképes dokumentáció,</li>
+                  <li>Fűtési rendszer: hőforrás és hőleadók adatai és fényképek,</li>
+                  <li>Megújuló energiaforrások.</li>
+                </ol>
+                <p>
+                  A felmérést nagyban tudja gyorsítani, amennyiben rendelkezésemre tudja bocsátani: az ingatlan alaprajzát, tervdokumentációt, épületgépészeti tervet, megújuló energiaforrások terveit.
                 </p>
               </div>
             </div>
@@ -147,7 +175,7 @@
               </div>
               <div class="content__body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                  A <strong>felmérés után 24 órán belül elkészítem a tanusítványt</strong> a felvett adatok és elkészített fényképek alapján, majd elvégezzük a hitelesítését az építésügyi portálon.
                 </p>
               </div>
             </div>
@@ -164,89 +192,122 @@
               </div>
               <div class="content__body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at tempor magna. Cras vel turpis sed felis tincidunt fermentum sed in urna. Duis vel ornare ligula. Nam convallis posuere enim, non gravida arcu volutpat egestas.
+                  Vegye át <strong>elektronikus úton akár 48 órán belül</strong> a tanusítványát!
+                </p>
+                <p>
+                  Amennyiben papír alapon szeretné megkapni a tanusítványát, postai úton tudjuk Önhöz eljuttatni, amely esetben nem tudjuk garantálni a 48 órás átfutási időt.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
-
-        <a href="#page4" class="btn">Milyen besorolást kaphat az ingatlanom? &nbsp;<i class="fa-solid fa-angles-down"></i></a>
-
       </section>
 
-      <section class="content-wrapper --onepager" id="page4">
-        <h3>Energetikai besorolások</h3>
+      <section class="content-wrapper" id="page4">
+        <h3 class="content__title">Energetikai besorolások</h3>
         <h4>Milyen besorolások léteznek és mit árulnak el ezek az épületről?</h4>
-        <p>
-        </p>
         <figure>
-          <img src="img/" alt="" class="content__pic">
-          <figcaption>Energetikai tanusítás</figcaption>
+          <img src="img/energetikai-besorolasok.jpg" alt="Energetikai besorolások" class="content__pic">
+          <figcaption>Energetikai besorolások</figcaption>
         </figure>
-        <a href="#page5" class="btn">Mutatunk pár példát &nbsp;<i class="fa-solid fa-angles-down"></i></a>
+        <p>
+          A jelenleg hatályban lévő szabályozások értelmében Magyarországon összesen <strong>12 kategóriába lehet sorolni az épületeket, AA++-tól JJ-ig</strong>.
+        </p>
+        <p>
+          Napjainkban már csak <strong>min. BB kategóriás épületek építhetők itthon</strong> – ehhez a besoroláshoz megújuló energiaforrás használatára, alacsony energiafogyasztásra, rendkívül fejlett hőszigetelési megoldásokra van szükség (lakások esetén az egész épületre vonatkozóan).
+        </p>
+        <p>
+          Az <strong>AA kategória</strong> a BB-hez tartozó követelményeken felül a hőtermelők időjárásfüggő szabályozásának alkalmazását, a helyiségenként változtatható fűtési beállításokat, az önálló tulajdonú, vagy bérbe adható épületrészek energiafogyasztásának külön mérését követeli meg.
+        </p>
+        <p>
+          A helyszíni felmréést követően a számítógépes tanusító szoftverünk segítségével gyorsan meg tudjuk állapítani, az Ön ingatlana melyik kategóriába esik.
+        </p>
       </section>
 
-      <section class="content-wrapper --onepager" id="page5">
-        <h3>Referenciák</h3>
-        <h4></h4>
-        <figure class="reference__figure">
-          <img src="img/" alt="" class="reference__pic">
-          <figcaption class="reference__caption">Energetikai tanusítás</figcaption>
+      <section class="content-wrapper" id="page5">
+        <h3 class="content__title">Referenciák</h3>
+        <h4>Új ingatlan tanusítása</h4>
+        <p>Új építésű ingatlan használatbavételi engedélyéhez szükséges tanusítást végeztem a képen látható családiházon.</p>
+        <figure>
+          <img src="img/hasznalat.jpg" alt="Használatbavételi engedélyhez készített energetikai tanusítvány" class="content__pic">
+          <figcaption>2021-ben épület családiház</figcaption>
         </figure>
-        <figure class="reference__figure">
-          <img src="img/" alt="" class="reference__pic">
-          <figcaption class="reference__caption">Energetikai tanusítás</figcaption>
+
+        <h4>Használt ingatlan adás/vétel</h4>
+        <p>2013-óta előírás a használt ingatlanok adás/vételének esetén energetikai tanusítvány készítése, amelyet a képen látható épületnél volt szerencsém elkészíteni az előadó megbízásából.</p>
+        <figure>
+          <img src="img/adasvetel.jpg" alt="" class="content__pic">
+          <figcaption>70-es évek végén épület családiház</figcaption>
         </figure>
-        <figure class="reference__figure">
-          <img src="img/" alt="" class="reference__pic">
-          <figcaption class="reference__caption">Energetikai tanusítás</figcaption>
-        </figure>
-        <a href="#page6" class="btn">Mennyibe fog ez nekem kerülni? &nbsp;<i class="fa-solid fa-angles-down"></i></a>
       </section>
 
-      <section class="content-wrapper --onepager" id="page6">
-        <h3>Árak</h3>
+      <section class="content-wrapper" id="page6">
+        <h3 class="content__title">Árak</h3>
         <h4>Mennyibe kerül egy energetikai tanusítvány?</h4>
-        <p></p>
 
         <div class="pricing__container">
+
           <div class="pricing__box">
-            <h3 class="pricing__title">Családi ház</h3>
-            <p class="pricing__text"></p>
+            <h3 class="pricing__title">Házak</h3>
+            <ul class="pricing__list">
+              <li>0 - 160 m2 közötti,</li>
+              <li>családi ház vagy ikerház tanusítása</li>
+              <li>akár 48 órán belül.</li>
+            </ul>
+            <p><strong>*160 m2 feletti ingatlan</strong> esetén kérje <strong>egyedi ajánlatomat.</strong></p>
             <p class="pricing__price">25 000 Ft</p>
-            <a href="" class="btn btn--contact">Megrendelem!</a>
+            <a href="#contact" class="btn btn--primary">Megrendelem!</a>
           </div>
 
           <div class="pricing__box">
-            <h3 class="pricing__title">Lakás</h3>
-            <p class="pricing__text"></p>
+            <h3 class="pricing__title">Lakások</h3>
+            <ul class="pricing__list">
+              <li>0 - 120 m2 közötti,</li>
+              <li>társasházi, panel lakások tanusítása</li>
+              <li>akár 48 órán belül.</li>
+            </ul>
+            <p><strong>*120 m2 feletti</strong> ingatlan</strong> esetén kérje <strong>egyedi ajánlatomat.</strong></p>
             <p class="pricing__price">20 000 Ft</p>
-            <a href="" class="btn btn--contact">Megrendelem!</a>
+            <a href="#contact" class="btn btn--primary">Megrendelem!</a>
           </div>
 
           <div class="pricing__box">
             <h3 class="pricing__title">Egyedi ajánlat</h3>
-            <p class="pricing__text"></p>
+            <ul class="pricing__list">
+              <li>160 m2 feletti házak,</li>
+              <li>120 m2 feletti lakások,</li>
+              <li>teljes társasház vagy több ingatlan,</li>
+              <li>ipari célú ingatlanok tanusítása.</li>
+            </ul>
             <p class="pricing__price">Egyedi árszabás alapján</p>
-            <a href="" class="btn btn--contact">Megrendelem!</a>
+            <a href="#contact" class="btn btn--primary">Megrendelem!</a>
           </div>
 
-          <a href="#contact" class="btn">Szeretném megrendelni! &nbsp;<i class="fa-solid fa-angles-down"></i></a>
         </div>
       </section>
 
-      <section class="content-wrapper --onepager" id="contact">
-        <h3>Kapcsolat</h3>
+      <section class="content-wrapper flex --onepager" id="contact">
+        <h3 class="content__title">Kapcsolat</h3>
+        <h4>Kérdése van a szolgáltatással kapcsolatban?</h4>
+        <h4>vagy szeretné megrendelni a tanusítást?</h4>
+        <p>Keressen bizalommal <strong>telefonon 08:00 és 20:00 között (hétvégén is)</strong> vagy <strong>írjon</strong> a lenti mező segítségével vagy a megadott email-re.</p>
         <p>
+          <span class="badge"><i class="fa-solid fa-phone"></i></span>
+          Telefon: <a href="tel:+36701234567">+36 70 / 123 - 4567</a>
         </p>
-        <form class="contact__form">
-          <input type="text" id="name" name="name" placeholder="Name" class="contact__input-field">
-          <input type="text" id="email" name="email" placeholder="Enter Email" class="contact__input-field">
-          <textarea id="message" name="message" placeholder="Enter your Message..." class="contact__input-field contact__input-field--textarea"></textarea>
-          <input type="submit" value="Submit" class="btn btn--contact">
+        <p>
+          <span class="badge"><i class="fa-solid fa-envelope"></i></span>
+          E-mail: <a href="mailt:mail@akarmi.hu">mail@akarmi.hu</a>
+        </p>
+
+        <form>
+          <input type="text" id="name" name="name" placeholder="Név" class="form__input-field">
+          <input type="text" id="email" name="email" placeholder="Ön e-mail címe" class="form__input-field">
+          <textarea id="message" name="message" placeholder="Kérem írja le az üzenetetét..." class="form__input-field contact__input-field--textarea"></textarea>
+          <input type="submit" value="Küldés" class="btn btn--primary btn--contact">
         </form>
+
+        <a href="#home" class="btn">Ugrás a tetejére &nbsp;<i class="fa-solid fa-angles-up"></i></a>
       </section>
 
     </main>
