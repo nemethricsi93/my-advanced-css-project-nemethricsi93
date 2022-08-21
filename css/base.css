@@ -6,6 +6,8 @@
  * Variables............Globally-available variables (colors).
  * Box-sizing...........Better default `box-sizing`.
  * Base font............Basic font styles.
+ * Paragraph............Paragraph justified.
+ * Div container........Div container padding.
  * Headings.............H1-H3 styles.
  * Links................Hyperlink styles.
  * Strong...............Style of <strong> element.
@@ -64,6 +66,21 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+
+/*------------------------------------*\
+  #PARAGRAPH
+\*------------------------------------*/
+
+p { text-align: justify; }
+
+
+/*------------------------------------*\
+  #DIV CONTAINER
+\*------------------------------------*/
+
+div { padding: .5rem; }
+
+
 /*------------------------------------*\
   #HEADINGS
 \*------------------------------------*/
@@ -94,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
   color: var(--font-color-primary-strong);
 }
 

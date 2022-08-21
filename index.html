@@ -16,10 +16,10 @@
 </head>
 
 <body>
-  <div class="grid-container" id="home">
+  <div class="grid grid--main" id="home">
 
     <nav class="navigation" id="top-nav">
-      <ul class="navigation__list flex">
+      <ul class="navigation__list flex flex--row">
         <li class="toggle"><a href="#" class="nav__link"><i class="fa-solid fa-bars"></i> Menü</a></li>
         <li class="item"><a href="#home" class="nav__link">Kezdőlap</a></li>
         <li class="item"><a href="#page1" class="nav__link">Energetikai tanusítás</a></li>
@@ -78,35 +78,49 @@
 
       <section class="content-wrapper" id="page1">
         <h3 class="content__title">Energetikai tanusítvány</h3>
-        <h4>Mi az és mire jó?</h4>
-        <p>
-          Az energetikai tanúsítvány egy magánokirat, mely az ingatlan energia fogyasztásáról ad bővebb tájékoztatást. A fogyasztás mértéke fogja meghatározni az ingatlan besorolását, kategóriáját. Továbbá tájékoztatást ad az ingatlan fűtés és meleg víz rendszeréről, az épület rétegrendjeiről, valamint javaslatot tesz az ingatlan energetikai korszerűsítésére is. A manapság fizetendő magas rezsi költségek miatt egyre nagyobb figyelem irányul rá a vásárlók és bérlők körében.
-        </p>
-        <figure>
-          <img src="img/energetikai-tanusitas.jpg" alt="Energetikai tanusítás" class="content__pic">
-          <figcaption>Energetikai tanusítás</figcaption>
-        </figure>
+        <div class="grid">  
+          <div>
+          <h4>Mi az és mire jó?</h4>
+            <p>
+              Az energetikai tanúsítvány egy magánokirat, mely az ingatlan energia fogyasztásáról ad bővebb tájékoztatást. A fogyasztás mértéke fogja meghatározni az ingatlan besorolását, kategóriáját. Továbbá tájékoztatást ad az ingatlan fűtés és meleg víz rendszeréről, az épület rétegrendjeiről, valamint javaslatot tesz az ingatlan energetikai korszerűsítésére is. A manapság fizetendő magas rezsi költségek miatt egyre nagyobb figyelem irányul rá a vásárlók és bérlők körében.
+            </p>
+          </div>
+          <div class="pic__container">
+            <div class="pic__box--inline --right">
+              <img src="img/energetikai-tanusitas.jpg" alt="Energetikai tanusítás" class="content__pic--big">
+            </div>
+            <div class="pic__box--inline --left">
+              <img src="img/tanusitvany.png" alt="Tanusítvány" class="content__pic--small">
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="content-wrapper" id="page2">
         <h3 class="content__title">Mikor kell tanusítást készíttetni?</h3>
-        <h4>Energetikai tanusítványra szüksége lehet:</h4>
-        <ol>
-          <li>Új ingatlanának használatbavételi engedélyéhez,</li>
-          <li>Ingatlan adás / vétel esetén,</li>
-          <li>Ingatlan bérbeadás esetén,</li>
-          <li>Meglévő ingatlanának energetikai pályázatához, amennyiben a pályázat azt előírja,</li>
-          <li>Saját felhasználásra, amennyiben érdekli ingatlanának energetikai korszerűsége.</li>
-        </ol>
-        <h4>Mikor nem szükséges energetikai tanusítvány készíttetni:</h4>
-        <ol>
-          <li>50 m2-nél kisebb hasznos alapterületű, külön álló épületre (családi házra),</li>
-          <li>nyaralóra, hétvégi házra, üdülőre (évente 4 hónapnál rövidebb használatra szánt épületre),</li>
-          <li>legfeljebb 2 évi használatra szánt felvonulási épületre,</li>
-          <li>hitéleti célra szánt épületre,</li>
-          <li>alacsony energiaigényű mezőgazdasági épületre,</li>
-          <li>bizonyos esetekben műhelyre, vagy ipari területen lévő épületre.</li>
-        </ol>
+        <div class="grid">
+          <div>
+            <h4>Energetikai tanusítványra szüksége lehet:</h4>
+            <ol>
+              <li>Új ingatlanának használatbavételi engedélyéhez,</li>
+              <li>Ingatlan adás / vétel esetén,</li>
+              <li>Ingatlan bérbeadás esetén,</li>
+              <li>Meglévő ingatlanának energetikai pályázatához, amennyiben a pályázat azt előírja,</li>
+              <li>Saját felhasználásra, amennyiben érdekli ingatlanának energetikai korszerűsége.</li>
+            </ol>
+          </div>
+          <div>
+            <h4>Mikor nem szükséges:</h4>
+            <ol>
+              <li>50 m2-nél kisebb hasznos alapterületű, külön álló épületre (családi házra),</li>
+              <li>nyaralóra, hétvégi házra, üdülőre (évente 4 hónapnál rövidebb használatra szánt épületre),</li>
+              <li>legfeljebb 2 évi használatra szánt felvonulási épületre,</li>
+              <li>hitéleti célra szánt épületre,</li>
+              <li>alacsony energiaigényű mezőgazdasági épületre,</li>
+              <li>bizonyos esetekben műhelyre, vagy ipari területen lévő épületre.</li>
+            </ol>
+          </div>
+        </div>
       </section>
       
       <section class="content-wrapper" id="page3">
@@ -206,39 +220,48 @@
       <section class="content-wrapper" id="page4">
         <h3 class="content__title">Energetikai besorolások</h3>
         <h4>Milyen besorolások léteznek és mit árulnak el ezek az épületről?</h4>
-        <figure>
-          <img src="img/energetikai-besorolasok.jpg" alt="Energetikai besorolások" class="content__pic">
-          <figcaption>Energetikai besorolások</figcaption>
-        </figure>
-        <p>
-          A jelenleg hatályban lévő szabályozások értelmében Magyarországon összesen <strong>12 kategóriába lehet sorolni az épületeket, AA++-tól JJ-ig</strong>.
-        </p>
-        <p>
-          Napjainkban már csak <strong>min. BB kategóriás épületek építhetők itthon</strong> – ehhez a besoroláshoz megújuló energiaforrás használatára, alacsony energiafogyasztásra, rendkívül fejlett hőszigetelési megoldásokra van szükség (lakások esetén az egész épületre vonatkozóan).
-        </p>
-        <p>
-          Az <strong>AA kategória</strong> a BB-hez tartozó követelményeken felül a hőtermelők időjárásfüggő szabályozásának alkalmazását, a helyiségenként változtatható fűtési beállításokat, az önálló tulajdonú, vagy bérbe adható épületrészek energiafogyasztásának külön mérését követeli meg.
-        </p>
-        <p>
-          A helyszíni felmréést követően a számítógépes tanusító szoftverünk segítségével gyorsan meg tudjuk állapítani, az Ön ingatlana melyik kategóriába esik.
-        </p>
+        <div class="grid">
+          <figure>
+            <img src="img/energetikai-besorolasok.jpg" alt="Energetikai besorolások" class="content__pic">
+            <figcaption>Energetikai besorolások</figcaption>
+          </figure>
+          <div>
+            <p>
+              A jelenleg hatályban lévő szabályozások értelmében Magyarországon összesen <strong>12 kategóriába lehet sorolni az épületeket, AA++-tól JJ-ig</strong>.
+            </p>
+            <p>
+              Napjainkban már csak <strong>min. BB kategóriás épületek építhetők itthon</strong> – ehhez a besoroláshoz megújuló energiaforrás használatára, alacsony energiafogyasztásra, rendkívül fejlett hőszigetelési megoldásokra van szükség (lakások esetén az egész épületre vonatkozóan).
+            </p>
+            <p>
+              Az <strong>AA kategória</strong> a BB-hez tartozó követelményeken felül a hőtermelők időjárásfüggő szabályozásának alkalmazását, a helyiségenként változtatható fűtési beállításokat, az önálló tulajdonú, vagy bérbe adható épületrészek energiafogyasztásának külön mérését követeli meg.
+            </p>
+            <p>
+              A helyszíni felmréést követően a számítógépes tanusító szoftverünk segítségével gyorsan meg tudjuk állapítani, az Ön ingatlana melyik kategóriába esik.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="content-wrapper" id="page5">
         <h3 class="content__title">Referenciák</h3>
-        <h4>Új ingatlan tanusítása</h4>
-        <p>Új építésű ingatlan használatbavételi engedélyéhez szükséges tanusítást végeztem a képen látható családiházon.</p>
-        <figure>
-          <img src="img/hasznalat.jpg" alt="Használatbavételi engedélyhez készített energetikai tanusítvány" class="content__pic">
-          <figcaption>2021-ben épület családiház</figcaption>
-        </figure>
-
-        <h4>Használt ingatlan adás/vétel</h4>
-        <p>2013-óta előírás a használt ingatlanok adás/vételének esetén energetikai tanusítvány készítése, amelyet a képen látható épületnél volt szerencsém elkészíteni az előadó megbízásából.</p>
-        <figure>
-          <img src="img/adasvetel.jpg" alt="" class="content__pic">
-          <figcaption>70-es évek végén épület családiház</figcaption>
-        </figure>
+        <div class="grid">
+          <div>
+            <h4>Új ingatlan tanusítása</h4>
+            <p>Új építésű ingatlan használatbavételi engedélyéhez szükséges tanusítást végeztem a képen látható családiházon.</p>
+            <figure>
+              <img src="img/hasznalat.jpg" alt="Használatbavételi engedélyhez készített energetikai tanusítvány" class="content__pic">
+              <figcaption>2021-ben épület családiház</figcaption>
+            </figure>
+          </div>
+          <div>
+            <h4>Használt ingatlan adás/vétel</h4>
+            <p>2013-óta előírás a használt ingatlanok adás/vételének esetén energetikai tanusítvány készítése, amelyet a képen látható épületnél volt szerencsém elkészíteni az előadó megbízásából.</p>
+            <figure>
+              <img src="img/adasvetel.jpg" alt="" class="content__pic">
+              <figcaption>70-es évek végén épület családiház</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="content-wrapper" id="page6">
@@ -247,7 +270,7 @@
 
         <div class="pricing__container">
 
-          <div class="pricing__box">
+          <div class="pricing__box flex">
             <h3 class="pricing__title">Házak</h3>
             <ul class="pricing__list">
               <li>0 - 160 m2 közötti,</li>
@@ -259,19 +282,19 @@
             <a href="#contact" class="btn btn--primary">Megrendelem!</a>
           </div>
 
-          <div class="pricing__box">
+          <div class="pricing__box flex">
             <h3 class="pricing__title">Lakások</h3>
             <ul class="pricing__list">
               <li>0 - 120 m2 közötti,</li>
               <li>társasházi, panel lakások tanusítása</li>
               <li>akár 48 órán belül.</li>
             </ul>
-            <p><strong>*120 m2 feletti</strong> ingatlan</strong> esetén kérje <strong>egyedi ajánlatomat.</strong></p>
+            <p><strong>*120 m2 feletti</strong> ingatlan esetén kérje <strong>egyedi ajánlatomat.</strong></p>
             <p class="pricing__price">20 000 Ft</p>
             <a href="#contact" class="btn btn--primary">Megrendelem!</a>
           </div>
 
-          <div class="pricing__box">
+          <div class="pricing__box flex">
             <h3 class="pricing__title">Egyedi ajánlat</h3>
             <ul class="pricing__list">
               <li>160 m2 feletti házak,</li>
@@ -288,34 +311,34 @@
 
       <section class="content-wrapper flex --onepager" id="contact">
         <h3 class="content__title">Kapcsolat</h3>
-        <h4>Kérdése van a szolgáltatással kapcsolatban?</h4>
-        <h4>vagy szeretné megrendelni a tanusítást?</h4>
-        <p>Keressen bizalommal <strong>telefonon 08:00 és 20:00 között (hétvégén is)</strong> vagy <strong>írjon</strong> a lenti mező segítségével vagy a megadott email-re.</p>
-        <p>
-          <span class="badge"><i class="fa-solid fa-phone"></i></span>
-          Telefon: <a href="tel:+36701234567">+36 70 / 123 - 4567</a>
-        </p>
-        <p>
-          <span class="badge"><i class="fa-solid fa-envelope"></i></span>
-          E-mail: <a href="mailt:mail@akarmi.hu">mail@akarmi.hu</a>
-        </p>
-
-        <form>
-          <input type="text" id="name" name="name" placeholder="Név" class="form__input-field">
-          <input type="text" id="email" name="email" placeholder="Ön e-mail címe" class="form__input-field">
-          <textarea id="message" name="message" placeholder="Kérem írja le az üzenetetét..." class="form__input-field contact__input-field--textarea"></textarea>
-          <input type="submit" value="Küldés" class="btn btn--primary btn--contact">
-        </form>
-
+        <div class="grid grid--stretch">
+          <div>
+            <h4>Kérdése van a szolgáltatással kapcsolatban?</h4>
+            <h4>vagy szeretné megrendelni a tanusítást?</h4>
+            <p>Keressen bizalommal <strong>telefonon 08:00 és 20:00 között (hétvégén is)</strong> vagy <strong>írjon</strong> a lenti mező segítségével vagy a megadott email-re.</p>
+            <p>
+              <span class="badge"><i class="fa-solid fa-phone"></i></span>
+              Telefon: <a href="tel:+36701234567">+36 70 / 123 - 4567</a>
+            </p>
+            <p>
+              <span class="badge"><i class="fa-solid fa-envelope"></i></span>
+              E-mail: <a href="mailt:mail@akarmi.hu">mail@akarmi.hu</a>
+            </p>
+          </div>
+          <form class="flex form">
+            <input type="text" id="name" name="name" placeholder="Név" class="form__input-field">
+            <input type="text" id="email" name="email" placeholder="Ön e-mail címe" class="form__input-field">
+            <textarea id="message" name="message" placeholder="Kérem írja le az üzenetetét..." class="form__input-field form__input-field--textarea"></textarea>
+            <input type="submit" value="Küldés" class="btn btn--primary btn--contact">
+          </form>
+        </div>
         <a href="#home" class="btn">Ugrás a tetejére &nbsp;<i class="fa-solid fa-angles-up"></i></a>
       </section>
 
     </main>
 
     <footer class="footer">
-      <p class="footer__text content__item--center">&copy; 2022 Copyright 
-      <a href="#" title="" target="_blank" class="footer__link">Energetikai tanúsítás Győr-Moson-Sopron megyében</a> 
-      / Design by <a href="#" title="" target="_blank" class="footer__link">Richárd Németh</a></p>
+      <p class="footer__text">&copy;2022 Copyright <a href="#" title="Energetikai tanusítás Győr-Moson-Sopron megyében!" target="_blank">Energetikai tanúsítás Győr-Moson-Sopron megyében</a> / Design by <a href="https://github.com/nemethricsi93" title="Németh Richárd a GitHub-on!" target="_blank">Richárd Németh</a></p>
     </footer>
 
   </div>

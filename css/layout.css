@@ -17,18 +17,46 @@
   #GRID CONTAINER
 \*------------------------------------*/
 
-.grid-container {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 95% 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 0;
-  grid-template-areas: 
-  "navigation navigation navigation"
-  ". header ."
-  ". content ."
-  "footer footer footer";
+  padding: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .grid { 
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    justify-items: center; 
+  }
+}
+
+  .grid--main {
+    grid-template-columns: 1fr 95% 1fr;
+    grid-template-areas: 
+    "navigation navigation navigation"
+    ". header ."
+    ". content ."
+    "footer footer footer";
+  }
+
+  @media screen and (min-width: 1024px) {
+    .grid--main {
+      grid-template-columns: 1fr 80% 1fr; 
+      grid-template-areas: 
+      ". navigation ."
+      ". header ."
+      ". content ."
+      "footer footer footer";
+    }
+  }
+
+  .grid--stretch {
+    justify-content: stretch;
+    align-content: stretch;
+  }
 
   /*------------------------------------*\
     #NAVIGATION
@@ -36,14 +64,8 @@
 
   .navigation {
     grid-area: navigation;
+    width: 100%;
   }
-
-    .sticky {
-      position: fixed;
-      top:0;
-      left:0;
-      right:0;
-    }
 
 
   /*------------------------------------*\
@@ -55,6 +77,10 @@
     height: calc(100vh - 2.5rem);
     padding: 1rem 0;
   }
+
+    @media screen and (min-width: 768px) {
+      .header {height: auto;}
+    }
 
 
   /*------------------------------------*\
@@ -72,6 +98,7 @@
 
   .footer {
     grid-area: footer;
+    width:100%;
   }
 
 
@@ -85,6 +112,12 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+  /**
+  * This will be overwritten to flex-direction: row; with mediaqueri for desktop.
+  * in components.css line 47.
+  */
+  .flex--row { flex-direction: column; }
 
   .flex--center {
     justify-content: center;
