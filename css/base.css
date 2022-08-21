@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
   h1 {font-size: clamp(24px, 4vw, 40px);}
-
+  
   h2 {font-size: clamp(20px, 3.5vw, 32px);}
 
   h3 {font-size: clamp(18px, 3vw, 26px);}
@@ -146,6 +146,4 @@ ol {
   #STRONG
 \*------------------------------------*/
 
-strong {
-  text-decoration: underline var(--bg-btn) dashed 3px;
-}
+strong { text-decoration: underline var(--bg-btn) dashed 3px; }

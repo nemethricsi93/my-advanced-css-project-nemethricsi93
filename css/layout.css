@@ -58,6 +58,9 @@
     align-content: stretch;
   }
 
+  .grid--selfcenter { align-self: center; }
+  
+
   /*------------------------------------*\
     #NAVIGATION
   \*------------------------------------*/
